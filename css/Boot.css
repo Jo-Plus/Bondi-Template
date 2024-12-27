@@ -1,0 +1,303 @@
+:root {
+  --dark-color: #19283f;
+  --wheat-color: wheat;
+  --green-color: #33d1cc;
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+  --transition: 0.3s;
+}
+
+::selection {
+  background-color: var(--wheat-color);
+  color: var(--dark-color);
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--wheat-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: blueviolet;
+}
+
+a {
+  color: var(--wheat-color) !important;
+}
+
+.main-btn {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+  padding: 0.5rem 1rem;
+}
+
+.main-btn:hover {
+  color: var(--dark-color) !important;
+  background-color: var(--wheat-color);
+}
+
+.up {
+  transition: var(--transition);
+}
+
+.up:hover {
+  transform: translateY(-10px);
+}
+
+.name:hover {
+  color: darkviolet !important;
+}
+
+/* ========================================================================= */
+.navbar {
+  background-color: var(--dark-color);
+  min-height: 76px;
+  padding: 0px 5px !important;
+}
+
+.navbar .container {
+  padding: 0px !important;
+}
+
+.navbar .container ul {
+  column-gap: 5px;
+}
+
+.navbar .navbar-nav li a {
+  padding: 24px 10px !important;
+}
+
+.navbar .navbar-brand {
+  background-color: var(--wheat-color);
+  border-radius: 6px;
+}
+
+.navbar .navbar-brand:hover {
+  background-color: cornflowerblue;
+}
+
+.navbar .navbar-brand img {
+  z-index: 5;
+  width: 50px;
+  height: 50px;
+}
+
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover {
+  color: var(--green-color) !important;
+  border-bottom: 1px solid var(--green-color);
+}
+
+.navbar button {
+  color: var(--wheat-color);
+  border-color: var(--wheat-color) !important;
+  font-size: 25px;
+}
+
+.navbar .search {
+  border-left: 1px solid var(--green-color);
+}
+
+.navbar .search svg {
+  color: var(--green-color);
+}
+
+/* ============================================================================== */
+.landing {
+  background-color: var(--dark-color);
+  min-height: calc(100vh - 76px);
+}
+
+/* ============================================================================== */
+.main-title::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  background-color: var(--green-color);
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.features i {
+  color: var(--yellow-color);
+}
+
+/* ============================================================================== */
+.features .row {
+  gap: 10px;
+  justify-content: space-around;
+}
+
+.features .row .feat {
+  max-width: 350px;
+}
+
+.features .icon-holder {
+  height: 200px;
+}
+
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+  color: #eee;
+}
+
+.features .icon-holder .num {
+  font-size: 12rem;
+  color: var(--section-color);
+}
+
+.features .icon-holder .icon {
+  color: var(--green-color);
+}
+
+.features .feat h4 {
+  color: var(--yellow-color);
+}
+
+/* ========================================================================== */
+.our-work {
+  background-color: var(--section-color);
+}
+
+.our-work .row {
+  row-gap: 40px;
+}
+
+.our-work ul .active {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.our-work ul li:not(.active):hover {
+  color: var(--red-color);
+}
+
+.our-work .box {
+  padding: 5px;
+  position: relative;
+}
+
+.our-work .box::before {
+  content: "Application";
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  background-color: white;
+  transform: translateY(0px);
+  font-size: 1.5rem;
+  transition: var(--transition);
+  background-color: transparent;
+  color: transparent;
+}
+
+.our-work .box:hover::before {
+  transform: translateY(-30px);
+  background-color: white;
+  color: black;
+}
+
+/* ============================================================================ */
+.stuff .description {
+  max-width: 400px;
+}
+
+.stuff .row img {
+  max-width: 639.22px;
+  animation: up 3s linear infinite;
+}
+
+@keyframes up {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ============================================================================ */
+.team {
+  background-color: var(--section-color);
+}
+
+.team h2 {
+  color: var(--yellow-color);
+}
+
+.team .box h4 {
+  background-color: var(--green-color);
+}
+
+.team .row .myname:hover>h4 {
+  color: darkslateblue !important;
+}
+
+/* ============================================================================ */
+.project {
+  background-color: var(--dark-color);
+}
+
+/* ============================================================================ */
+.sub {
+  background-color: var(--yellow-color);
+}
+
+.sub input[type="text"] {
+  border: none;
+  border-bottom: 1px solid white !important;
+}
+
+.sub input[type="text"]:focus {
+  outline: none;
+}
+
+.sub ::placeholder {
+  color: white !important;
+}
+
+.sub input[type="submit"] {
+  background-color: var(--dark-color);
+  color: var(--yellow-color);
+}
+
+/* ============================================================================ */
+.footer {
+  background-color: var(--dark-color);
+}
+
+.footer .row .logo {
+  width: 100px;
+}
+
+.footer .row .logo:hover {
+  background-color: var(--wheat-color);
+  border-radius: 6px;
+}
+
+.footer .copyright>span {
+  color: var(--wheat-color);
+}
+
+.footer .copyright div span {
+  color: var(--yellow-color);
+}
